@@ -4,7 +4,7 @@
     renders identically everywhere — favicons cannot rely on a font being
     present.
 
-    Colours are DESIGN.md tokens, not new ones: sage --accent (#40614F) with the
+    Colours use the app's sage accent (#40614F) with the
     glyph knocked out in --bg. The dark-mode block swaps to the lifted sage
     (#8FB39F) the design system already defines for dark, with a dark glyph, so
     the mark keeps its contrast against dark browser chrome instead of going

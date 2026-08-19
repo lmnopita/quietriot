@@ -24,9 +24,9 @@ SOFTWARE.
 
 NOTE ON SCOPE
 
-This MIT license covers the CODE: the web app, the harvester pipeline, and the
-scripts.
+This MIT license covers the code in this repository: the web app and scripts.
 
-It does NOT cover the evidence corpus and its documentation — `src/data/`,
-`docs/EVIDENCE-VERIFICATION-LOG.md`, `docs/PRINCIPLES.md`, `PRODUCT.md` and
-`DESIGN.md` — which are licensed CC BY-SA 4.0. See LICENSE-CONTENT.
+It does NOT cover the evidence corpus and verification record —
+`src/data/evidence.json`, `src/data/taxonomy.ts`, and
+`docs/EVIDENCE-VERIFICATION-LOG.md` — which are licensed CC BY-SA 4.0. See
+LICENSE-CONTENT.

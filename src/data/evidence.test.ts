@@ -169,7 +169,7 @@ describe('evidence.json — referential integrity', () => {
 })
 
 /**
- * PRINCIPLES.md "When a claim is applied from similar research".
+ * When a claim is applied from similar research.
  *
  * Until 2026-08-09 the disclosure was a verbatim template at the head of
  * `why_lower_risk`, so it was obvious on sight when one went missing. It now

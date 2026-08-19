@@ -1,5 +1,5 @@
 /**
- * Citation verifier for the no-fabrication gate (PRINCIPLES.md #1).
+ * Citation verifier for the evidence-review process.
  *
  *   node scripts/verify-citation.mjs 10.1177/0149206305277800 [...more DOIs]
  *
@@ -37,10 +37,11 @@ const deinvert = (idx) => {
 }
 
 for (const doi of dois) {
+  const encodedDoi = encodeURIComponent(doi)
   console.log('\n' + '='.repeat(72))
   console.log('DOI:', doi)
 
-  const work = await get(`https://api.crossref.org/works/${doi}?mailto=${MAILTO}`)
+  const work = await get(`https://api.crossref.org/works/${encodedDoi}?mailto=${MAILTO}`)
   if (!work.ok) {
     console.log(`  ✗ Crossref lookup FAILED (HTTP ${work.status}) — DOI may not exist`)
     continue
@@ -56,11 +57,11 @@ for (const doi of dois) {
   console.log('     venue  :', (m['container-title'] || ['?'])[0])
   console.log('     type   :', m.type)
 
-  const agency = await get(`https://api.crossref.org/works/${doi}/agency?mailto=${MAILTO}`)
+  const agency = await get(`https://api.crossref.org/works/${encodedDoi}/agency?mailto=${MAILTO}`)
   const ag = agency.body?.message?.agency?.label ?? agency.body?.message?.agency?.id
   console.log(ag ? `  ✓ Registered with: ${ag}` : `  ✗ agency check failed (HTTP ${agency.status})`)
 
-  const oa = await get(`https://api.openalex.org/works/doi:${doi}?mailto=${MAILTO}`)
+  const oa = await get(`https://api.openalex.org/works/doi:${encodedDoi}?mailto=${MAILTO}`)
   if (!oa.ok) {
     console.log(`  ~ OpenAlex: no record (HTTP ${oa.status}) — abstract must be read manually`)
     continue

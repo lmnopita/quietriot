@@ -1,14 +1,12 @@
 /**
  * Which entries a cause has, and which causes are safe to offer.
  *
- * No AI, no network, no keys. This was a tag-intersection matcher until
- * 2026-08-09 (PLAN.md "Matching (Phase 1)") — entry tags intersected with the
- * reader's self-check answers, ranked by overlap. The self-check is gone, so
- * nothing is intersected with anything: a cause shows its whole shelf.
+ * No AI, no network, no keys. The app shows every vetted entry for a selected
+ * cause.
  *
  * `confidence` and `basis` are audit-only (see evidence.json _meta) and are
  * exposed here for internal use only — components must not render them to the
- * reader (PRINCIPLES.md "How answers read to users").
+ * reader.
  */
 import evidenceData from '../data/evidence.json'
 import { CAUSES, type Cause } from '../data/taxonomy'

@@ -403,7 +403,7 @@
   text-wrap: pretty;
 }
 
-/* Considerations — left-aligned, quieter than the why (DESIGN.md). */
+/* Considerations — left-aligned and quieter than the why. */
 .considerations {
   text-align: left;
 }
@@ -437,7 +437,7 @@
   color: var(--line);
 }
 
-/* The catalog card — real data only, our archival object (DESIGN.md). */
+/* The catalog card — real data only. */
 .catalog {
   position: relative;
   border: 1px solid var(--line);
@@ -567,8 +567,7 @@
   font-style: italic;
 }
 
-/* The contribute invitation, folded into the catalog card's own closing row
-   (issue #55) rather than a paragraph detached below it — a corrected source
+/* The contribute invitation is folded into the catalog card's closing row — a corrected source
    is a correction to the sources block above it, so it lives there. Styled
    like the last `.cat-entry` it follows: same dashed rule, same quiet size,
    just italic to read as an aside rather than another citation. */

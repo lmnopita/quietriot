@@ -38,30 +38,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Harvester (Python pipeline) — Python build/venv detritus
-harvester/.venv/
-harvester/**/__pycache__/
-harvester/**/*.pyc
-harvester/.pytest_cache/
-harvester/.ruff_cache/
-harvester/*.egg-info/
-
-# Harvester data. NOTHING under here is ever committed:
-# harvester.db is regenerable from raw/, raw/ is large and content-addressed,
-# config.toml holds the operator's own contact address and CSV path, and
-# logs/ can carry hostnames from a specific operator's institution.
+# Local research data and credentials
 harvester-data/
-harvester/harvester-data/
-
-# Credential CSVs, wherever they land. The keyring holds the secrets, but the
-# CSV still carries usernames and institution URLs.
 *credentials*.csv
-!harvester/tests/fixtures/*credentials*.csv
-
-# Playwright session state — a logged-in cookie jar is a live credential.
-harvester/sites/*.storage.json
-
-# Browser-automation debris from MCP tooling — never part of the project.
+*.storage.json
 .playwright-mcp/
 
 # Local workspace shortcut

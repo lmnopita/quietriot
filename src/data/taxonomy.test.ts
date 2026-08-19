@@ -20,7 +20,7 @@ function isNonEmptyString(v: unknown): boolean {
 // landed after the three layouts were rendered and compared.
 //
 // The lesson each time: assert against the screen the copy actually renders on,
-// and re-point the assertion whenever the copy moves. See PRINCIPLES.md.
+// and re-point the assertion whenever the copy moves.
 describe('meta-principle — values framing (G4)', () => {
   it('the value tag exists and is non-empty', () => {
     expect(isNonEmptyString(COPY.values.metaPrincipleValueTag)).toBe(true)

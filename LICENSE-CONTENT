@@ -9,8 +9,6 @@ The evidence corpus and the documents that govern it:
   src/data/evidence.json          the vetted entries and their citations
   src/data/taxonomy.ts            causes, self-check options, reader copy
   docs/EVIDENCE-VERIFICATION-LOG.md   how every citation was checked
-  docs/PRINCIPLES.md              the voice and no-fabrication contract
-  PRODUCT.md, DESIGN.md           the product and design specs
 
 The code is MIT licensed instead. See LICENSE.
 
