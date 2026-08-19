@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Vite / build caches
+.vite/
+*.tsbuildinfo
+
+# Local tooling / editor
+.claude/
+
+# Environment (Phase 2 — server-side secrets never committed)
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Harvester (Python pipeline) — Python build/venv detritus
+harvester/.venv/
+harvester/**/__pycache__/
+harvester/**/*.pyc
+harvester/.pytest_cache/
+harvester/.ruff_cache/
+harvester/*.egg-info/
+
+# Harvester data. NOTHING under here is ever committed:
+# harvester.db is regenerable from raw/, raw/ is large and content-addressed,
+# config.toml holds the operator's own contact address and CSV path, and
+# logs/ can carry hostnames from a specific operator's institution.
+harvester-data/
+harvester/harvester-data/
+
+# Credential CSVs, wherever they land. The keyring holds the secrets, but the
+# CSV still carries usernames and institution URLs.
+*credentials*.csv
+!harvester/tests/fixtures/*credentials*.csv
+
+# Playwright session state — a logged-in cookie jar is a live credential.
+harvester/sites/*.storage.json
+
+# Browser-automation debris from MCP tooling — never part of the project.
+.playwright-mcp/
+
+# Local workspace shortcut
+*.code-workspace

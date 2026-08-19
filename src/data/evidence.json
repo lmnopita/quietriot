@@ -1,0 +1,467 @@
+{
+  "_meta": {
+    "note": "CHECKPOINT #3 — the no-fabrication gate. Every source below was verified real, resolvable, and on-point at build time (Crossref/OpenAlex + agency-registration checks, or a resolving URL for the law review) and grounded in the paper's actual abstract. Unverifiable sources are dropped. Reader-facing prose follows PRINCIPLES.md 'How answers read to users' (plain words, fixed 5-part order, honest-limit line, extrapolation template).",
+    "reader_facing_fields": [
+      "pattern",
+      "why_lower_risk",
+      "low_risk_actions",
+      "caveats",
+      "sources"
+    ],
+    "audit_only_fields": [
+      "confidence",
+      "basis",
+      "id",
+      "applies_to_privilege",
+      "applies_to_causes",
+      "risk_level",
+      "need_level",
+      "accessibility"
+    ],
+    "honest_limit_last_note": "`honest_limit_last` is a rendering directive, not an audit-only field and not reader-facing copy. When true, the shared honest-limit line renders LAST among an entry's considerations instead of first. It changes position only, never presence: the line cannot be omitted or reworded per entry. Set on `breed-stigma-is-racial` so the card opens by acknowledging the reader's own experience of a frightening dog rather than with a hedge.",
+    "confidence_scale": "well-established | mixed | emerging (strength of the evidence base)",
+    "basis_scale": "direct (measured for this case) | extrapolated (applied from similar research; reader prose uses the PRINCIPLES.md template)",
+    "schema_version": 2,
+    "coverage_note": "Covers 7 causes with >=1 verified entry: racial-justice, gender-equity, stigmatized-breed-dogs (2 entries), lgbtq, immigrants, disability (2 entries), workers. The remaining cause (unhoused) has no vetted entry yet and is HIDDEN in the UI per taxonomy decision C — never shown empty. `trans` was removed from the taxonomy 2026-08-08 as redundant with lgbtq; its research gap stays recorded in the verification log. The immigrants entry also re-surfaces the `citizen` self-check axis per decision E."
+  },
+  "entries": [
+    {
+      "id": "advantaged-messenger-race",
+      "pattern": "When the person targeted by the bias names it, they're more likely to be waved off as 'just complaining.'",
+      "why_lower_risk": "Speaking up from outside the targeted group tends to cost less than it costs the people it's really about.",
+      "applies_to_privilege": [
+        "white"
+      ],
+      "applies_to_causes": [
+        "racial-justice"
+      ],
+      "low_risk_actions": [
+        "If a coworker of color makes a point that gets waved off, back it and keep it theirs: 'What she said matters; that got dropped too fast.'",
+        "If someone says something biased, name it in the moment, so they're not the only one who noticed.",
+        "Take your lead from the people already speaking and repeat their point instead of your own.",
+        "Get plugged in where you live: a local organizing meeting, a mutual-aid group, the group chat where the day-to-day work actually happens."
+      ],
+      "caveats": [
+        "People of color are already organizing on this. Follow their lead and back what they're asking for.",
+        "Most of this research watched how onlookers react in study settings. Your own workplace or family might go differently."
+      ],
+      "sources": [
+        {
+          "authors": "Rasinski, H. M., & Czopp, A. M.",
+          "year": 2010,
+          "title": "The effect of target status on witnesses' reactions to confrontations of bias",
+          "venue": "Basic and Applied Social Psychology",
+          "doi": "10.1080/01973530903539754",
+          "url": "https://doi.org/10.1080/01973530903539754",
+          "supports": "why_lower_risk — measured that a White confronter is heard as more persuasive, a Black confronter as more rude, for the same words"
+        },
+        {
+          "authors": "Gulker, J. E., Mark, A. Y., & Monteith, M. J.",
+          "year": 2013,
+          "title": "Confronting prejudice: The who, what, and why of confrontation effectiveness",
+          "venue": "Social Influence",
+          "doi": "10.1080/15534510.2012.736879",
+          "url": "https://doi.org/10.1080/15534510.2012.736879",
+          "supports": "why_lower_risk — measured greater acceptance of a White confronter than a Black one"
+        },
+        {
+          "authors": "Kaiser, C. R., & Miller, C. T.",
+          "year": 2001,
+          "title": "Stop complaining! The social costs of making attributions to discrimination",
+          "venue": "Personality and Social Psychology Bulletin",
+          "doi": "10.1177/0146167201272010",
+          "url": "https://doi.org/10.1177/0146167201272010",
+          "supports": "pattern — grounds the \"complainer\" cost mechanism, not the confronter comparison itself"
+        },
+        {
+          "authors": "Czopp, A. M., Monteith, M. J., & Mark, A. Y.",
+          "year": 2006,
+          "title": "Standing up for a change: Reducing bias through interpersonal confrontation",
+          "venue": "Journal of Personality and Social Psychology",
+          "doi": "10.1037/0022-3514.90.5.784",
+          "url": "https://doi.org/10.1037/0022-3514.90.5.784",
+          "supports": "low_risk_actions — confrontation reduces later bias regardless of confronter race; the effectiveness baseline"
+        }
+      ],
+      "confidence": "well-established",
+      "basis": "direct",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null
+    },
+    {
+      "id": "male-allies-sexism",
+      "pattern": "A woman who names sexism often gets written off as complaining.",
+      "why_lower_risk": "That brush-off doesn't stick to a man as easily, so the same point from him tends to land at less cost than it does for her.",
+      "applies_to_privilege": [
+        "man"
+      ],
+      "applies_to_causes": [
+        "gender-equity"
+      ],
+      "low_risk_actions": [
+        "Repeat and credit a woman's point in a meeting: 'Say more about what Dana raised; I don't think we finished with it.'",
+        "If someone makes a sexist remark, name it plainly, so a woman nearby isn't the only one who reacts.",
+        "Hand the credit and the airtime back to the women doing the work.",
+        "Find the group already on this where you are: a women's network at work, a local org, the group chat. Put your weight behind what they're asking for."
+      ],
+      "caveats": [
+        "Women are already organizing on this. Follow their lead and amplify them.",
+        "People tend to brush off complaints about sexism no matter who makes them, so this may cost you less; it's not a guarantee."
+      ],
+      "sources": [
+        {
+          "authors": "Drury, B. J., & Kaiser, C. R.",
+          "year": 2014,
+          "title": "Allies against sexism: The role of men in confronting sexism",
+          "venue": "Journal of Social Issues",
+          "doi": "10.1111/josi.12083",
+          "url": "https://doi.org/10.1111/josi.12083",
+          "supports": "why_lower_risk — measured that men acting as allies are evaluated more positively and taken more seriously"
+        },
+        {
+          "authors": "Gulker, J. E., Mark, A. Y., & Monteith, M. J.",
+          "year": 2013,
+          "title": "Confronting prejudice: The who, what, and why of confrontation effectiveness",
+          "venue": "Social Influence",
+          "doi": "10.1080/15534510.2012.736879",
+          "url": "https://doi.org/10.1080/15534510.2012.736879",
+          "supports": "pattern — sexism confrontations are broadly trivialized; used for the honest-limit line, not the man/woman comparison"
+        }
+      ],
+      "confidence": "well-established",
+      "basis": "direct",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null
+    },
+    {
+      "id": "breed-stigma-is-racial",
+      "pattern": "Plenty of people have had a genuinely frightening encounter with a dog, and nothing here argues with that. But the fear around these dogs is also tangled up with race: many Americans have racist and inaccurate stereotypes around who owns these dogs, and those stereotypes often extend to the animals themselves.",
+      "why_lower_risk": "That means the 'dangerous breed' argument often carries old ideas about who owns these dogs.",
+      "applies_to_privilege": [
+        "white"
+      ],
+      "applies_to_causes": [
+        "stigmatized-breed-dogs"
+      ],
+      "low_risk_actions": [
+        "When the 'dangerous breed' line comes up, you can point out that the fear is tied to who people imagine owns these dogs, not to the dogs themselves.",
+        "Share the research on this so the conversation isn't only about a dog's behavior or genes.",
+        "Get to know your local rescue folks: they usually have the research and the real stories to back it up."
+      ],
+      "caveats": [
+        "This isn't a claim that these dogs are never a concern, or that every breed debate is settled, only that the fear is wrapped up with race.",
+        "Rescues have been making this case for years. Follow their lead."
+      ],
+      "sources": [
+        {
+          "authors": "Tesler, M., & McThomas, M.",
+          "year": 2024,
+          "title": "The racialization of pit bulls: What dogs can teach us about racial politics",
+          "venue": "PLOS ONE",
+          "doi": "10.1371/journal.pone.0305959",
+          "url": "https://doi.org/10.1371/journal.pone.0305959"
+        },
+        {
+          "authors": "Linder, A.",
+          "year": 2018,
+          "title": "The Black Man's Dog: The social context of breed specific legislation",
+          "venue": "Animal Law Review (Lewis & Clark), 25(1)",
+          "doi": null,
+          "url": "https://lawcommons.lclark.edu/alr/vol25/iss1/4/"
+        },
+        {
+          "authors": "Thompson, A. J., Pickett, J. T., & Intravia, J.",
+          "year": 2022,
+          "title": "Racial stereotypes, extended criminalization, and support for breed-specific legislation: Experimental and observational evidence",
+          "venue": "Race and Justice",
+          "doi": "10.1177/2153368719876332",
+          "url": "https://doi.org/10.1177/2153368719876332"
+        }
+      ],
+      "confidence": "well-established",
+      "basis": "direct",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null,
+      "honest_limit_last": true,
+      "pattern_framing_basis": "The opening sentence ('Plenty of people have had a genuinely frightening encounter with a dog...') is uncited framing, not a finding — it acknowledges the reader rather than reporting research. The sources below back the racial-stereotype claim only. Audit-only, never rendered."
+    },
+    {
+      "id": "breed-advocate-lower-cost",
+      "pattern": "The stigma around these dogs is racially coded, so who's making the case shapes how it lands.",
+      "why_lower_risk": "A white advocate isn't heard through the same racial lens a Black or Latino advocate raising the identical point would be.",
+      "applies_to_privilege": [
+        "white"
+      ],
+      "applies_to_causes": [
+        "stigmatized-breed-dogs"
+      ],
+      "low_risk_actions": [
+        "Support pet rules based on a dog's actual behavior, not its looks, wherever you have a say: your homeowners' association, a landlord, or a city council meeting.",
+        "Boost the shelters and rescues already making this case, instead of starting your own.",
+        "Show up in person: volunteer at a shelter, go to a rescue event, or speak at a city hearing on breed rules."
+      ],
+      "caveats": [
+        "The idea that a white advocate feels less heat here comes from research on other situations, not from studying dog advocacy directly.",
+        "Whether you come across as 'less threatening' is shaped by your race, body, and class; it's not something everyone can count on equally."
+      ],
+      "sources": [
+        {
+          "authors": "Rasinski, H. M., & Czopp, A. M.",
+          "year": 2010,
+          "title": "The effect of target status on witnesses' reactions to confrontations of bias",
+          "venue": "Basic and Applied Social Psychology",
+          "doi": "10.1080/01973530903539754",
+          "url": "https://doi.org/10.1080/01973530903539754"
+        },
+        {
+          "authors": "Gulker, J. E., Mark, A. Y., & Monteith, M. J.",
+          "year": 2013,
+          "title": "Confronting prejudice: The who, what, and why of confrontation effectiveness",
+          "venue": "Social Influence",
+          "doi": "10.1080/15534510.2012.736879",
+          "url": "https://doi.org/10.1080/15534510.2012.736879"
+        }
+      ],
+      "confidence": "well-established",
+      "basis": "extrapolated",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null,
+      "messenger_claim_basis": "extrapolated — no source measures a messenger-cost asymmetry for dog advocacy; transferred from the race/gender confrontation literature via the required template. Audit-only, never rendered."
+    },
+    {
+      "id": "advantaged-messenger-lgbtq",
+      "pattern": "A straight person naming a homophobic comment usually isn't accused of overreacting or 'making it personal' the way an LGBTQIA+ person calling out the same comment can be.",
+      "why_lower_risk": "That difference in how the same words land is what tends to keep the cost lower for a straight speaker.",
+      "applies_to_privilege": [
+        "straight"
+      ],
+      "applies_to_causes": [
+        "lgbtq"
+      ],
+      "low_risk_actions": [
+        "If someone makes a homophobic joke or comment, say plainly that it doesn't sit right with you, so LGBTQIA+ folk nearby aren't the only ones who react.",
+        "Back up what LGBTQIA+ folk in the room are already saying and let them lead.",
+        "Ask what would actually help before jumping in.",
+        "Get plugged in with a local LGBTQIA+ group or meetup and into the group chat where people organize and look out for each other."
+      ],
+      "caveats": [
+        "Follow the lead of LGBTQIA+ folk and back them up.",
+        "The research that watched straight people speak up looked at whether and how they do it, not at whether it's cheaper for you than for a gay person. That part we're carrying over from similar situations."
+      ],
+      "sources": [
+        {
+          "authors": "Weber, D. M., & Dickter, C. L.",
+          "year": 2015,
+          "title": "Confronting the \"F\" word: The effects of gender, ambiguity, and individual difference variables on non-targets' confrontation of heterosexist comments",
+          "venue": "Journal of Homosexuality",
+          "doi": "10.1080/00918369.2015.1060050",
+          "url": "https://doi.org/10.1080/00918369.2015.1060050"
+        },
+        {
+          "authors": "Rasinski, H. M., & Czopp, A. M.",
+          "year": 2010,
+          "title": "The effect of target status on witnesses' reactions to confrontations of bias",
+          "venue": "Basic and Applied Social Psychology",
+          "doi": "10.1080/01973530903539754",
+          "url": "https://doi.org/10.1080/01973530903539754"
+        },
+        {
+          "authors": "Gulker, J. E., Mark, A. Y., & Monteith, M. J.",
+          "year": 2013,
+          "title": "Confronting prejudice: The who, what, and why of confrontation effectiveness",
+          "venue": "Social Influence",
+          "doi": "10.1080/15534510.2012.736879",
+          "url": "https://doi.org/10.1080/15534510.2012.736879"
+        }
+      ],
+      "confidence": "well-established",
+      "basis": "extrapolated",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null,
+      "messenger_claim_basis": "extrapolated — no source tests the comparative-cost claim for sexual orientation; transferred from the race/gender confrontation literature. Audit-only, never rendered."
+    },
+    {
+      "id": "citizen-buffer-immigrants",
+      "pattern": "Enforcement risk falls on people without status, not on citizens, and that fear is documented to pull people back from public life.",
+      "why_lower_risk": "What is safe for any particular person is not something research can settle.",
+      "applies_to_privilege": [
+        "citizen"
+      ],
+      "applies_to_causes": [
+        "immigrants"
+      ],
+      "low_risk_actions": [
+        "Find where immigrant-led organizing is already happening near you: a rapid-response network, a legal-aid clinic, a mutual-aid group.",
+        "Support the specific asks that group is already making, rather than acting on your own.",
+        "Add your voice at open public meetings and comment periods to back those groups' positions.",
+        "Share reputable know-your-rights and legal-aid resources from those organizations rather than advice of your own."
+      ],
+      "caveats": [
+        "Immigrants are already organizing for themselves. Get behind them and follow their lead.",
+        "Most of this research looks at Latino communities, where enforcement has fallen hardest."
+      ],
+      "sources": [
+        {
+          "authors": "Alsan, M., & Yang, C. S.",
+          "year": 2024,
+          "title": "Fear and the safety net: Evidence from Secure Communities",
+          "venue": "Review of Economics and Statistics",
+          "doi": "10.1162/rest_a_01250",
+          "url": "https://doi.org/10.1162/rest_a_01250"
+        },
+        {
+          "authors": "Maginot, K. B.",
+          "year": 2021,
+          "title": "Effects of deportation fear on Latinxs' civic and political participation",
+          "venue": "Ethnic and Racial Studies",
+          "doi": "10.1080/01419870.2020.1738516",
+          "url": "https://doi.org/10.1080/01419870.2020.1738516"
+        }
+      ],
+      "confidence": "well-established",
+      "basis": "direct",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null
+    },
+    {
+      "id": "access-advocate-workplace",
+      "pattern": "Employees with hearing loss who expected their request to be seen as a burden asked less often over time.",
+      "why_lower_risk": "Someone who doesn't need the access themselves carries none of the burden narrative the person who does need it would: colleagues don't wonder if they're being 'high-maintenance' for asking on someone else's behalf.",
+      "applies_to_privilege": [
+        "access-not-mine"
+      ],
+      "applies_to_causes": [
+        "disability"
+      ],
+      "low_risk_actions": [
+        "If a meeting, venue, or document isn't accessible, flag it yourself, rather than waiting for the person who needs it to ask.",
+        "Ask the organizers whether the space works rather than asking the person who needs it. Finding out shouldn't be their job.",
+        "When someone's accommodation gets treated as a favor, say plainly that it isn't one.",
+        "Follow disability-led groups where you live and back the changes they're already pushing for."
+      ],
+      "caveats": [
+        "People with disabilities are already organizing on this. Follow their lead and don't speak over them.",
+        "This research followed employees with hearing loss asking for accommodations at work. Other disabilities and other settings may go differently.",
+        "The part about it costing you less comes from research on other situations, not from studying disability advocacy directly."
+      ],
+      "sources": [
+        {
+          "authors": "Baldridge, D. C., & Veiga, J. F.",
+          "year": 2006,
+          "title": "The impact of anticipated social consequences on recurring disability accommodation requests",
+          "venue": "Journal of Management",
+          "doi": "10.1177/0149206305277800",
+          "url": "https://doi.org/10.1177/0149206305277800",
+          "supports": "pattern — measured cost of asking for your own accommodation"
+        },
+        {
+          "authors": "Baldridge, D. C., & Swift, M. L.",
+          "year": 2011,
+          "title": "Withholding requests for disability accommodation",
+          "venue": "Journal of Management",
+          "doi": "10.1177/0149206310396375",
+          "url": "https://doi.org/10.1177/0149206310396375",
+          "supports": "pattern — corroborates request-withholding on a second sample"
+        }
+      ],
+      "confidence": "mixed",
+      "basis": "extrapolated",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null,
+      "messenger_claim_basis": "extrapolated — NO source in this entry measures the messenger asymmetry for disability; transferred from the confrontation literature (Rasinski & Czopp 2010; Gulker et al. 2013). Audit-only, never rendered."
+    },
+    {
+      "id": "access-advocate-public-info",
+      "pattern": "Someone who doesn't need the access themselves can ask at less cost than it takes from the people who do.",
+      "why_lower_risk": "Access often doesn't happen. In one six-year review of complaints, nearly half were from people told no interpreter was available. And when official information isn't accessible, people fall back on social media instead of public health sources.",
+      "applies_to_privilege": [
+        "access-not-mine"
+      ],
+      "applies_to_causes": [
+        "disability"
+      ],
+      "low_risk_actions": [
+        "Ask whether a public meeting, stream, or event will be captioned and interpreted, while there's still time to arrange it.",
+        "When an organization posts a video or a briefing without captions, ask them for it in public.",
+        "If an interpreter was promised and didn't arrive, say something. Complaints from people who don't need the interpreter still count.",
+        "Follow disability-led groups where you live and back the changes they're already pushing for."
+      ],
+      "caveats": [
+        "People with disabilities have been raising this for decades. Follow their lead and don't take the credit.",
+        "The complaints research covers Deaf people in one US state, in healthcare settings. The COVID study surveyed 110 people in Kuwait and Saudi Arabia. Neither looked at press briefings, and neither is nationwide.",
+        "The part about it costing you less comes from research on other situations, not from studying access advocacy directly."
+      ],
+      "sources": [
+        {
+          "authors": "Schniedewind, E., Lindsay, R., & Snow, S.",
+          "year": 2020,
+          "title": "Ask and ye shall not receive: Interpreter-related access barriers reported by Deaf users of American sign language",
+          "venue": "Disability and Health Journal",
+          "doi": "10.1016/j.dhjo.2020.100932",
+          "url": "https://doi.org/10.1016/j.dhjo.2020.100932",
+          "supports": "why_lower_risk — access is withheld routinely and increasingly"
+        },
+        {
+          "authors": "Almusawi, H., Alasim, K., BinAli, S., & Alherz, M.",
+          "year": 2021,
+          "title": "Disparities in health literacy during the COVID-19 pandemic between the hearing and deaf communities",
+          "venue": "Research in Developmental Disabilities",
+          "doi": "10.1016/j.ridd.2021.104089",
+          "url": "https://doi.org/10.1016/j.ridd.2021.104089",
+          "supports": "why_lower_risk — withheld access measurably degrades what people know"
+        }
+      ],
+      "confidence": "mixed",
+      "basis": "extrapolated",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null,
+      "messenger_claim_basis": "extrapolated — NO source in this entry measures the messenger asymmetry for disability; transferred from the confrontation literature (Rasinski & Czopp 2010; Gulker et al. 2013). Audit-only, never rendered."
+    },
+    {
+      "id": "secure-worker-voice",
+      "pattern": "Job security changes who speaks up at work. A 2020 survey found that workers in part-time, temp, or contract jobs raised concerns less often than colleagues with steadier footing.",
+      "why_lower_risk": "A worker with steadier footing or more job security can put something on the record that a less secure colleague would think twice about. The people most affected by a scheduling change or a safety problem are often the least able to afford raising it.",
+      "applies_to_privilege": [
+        "workplace-seniority"
+      ],
+      "applies_to_causes": [
+        "workers"
+      ],
+      "low_risk_actions": [
+        "Raise it with a colleague first, then say it out loud together in the meeting where it applies, so it's on the record and isn't just one person's complaint.",
+        "When a colleague raises something and it gets dropped, back it and keep it theirs.",
+        "Ask the question about hours, scheduling, or safety that a probationary or part-time colleague would be risking more to ask.",
+        "Find out whether people where you work are already organizing and take your lead from them."
+      ],
+      "caveats": [
+        "People at your workplace may already be organizing. Ask before deciding what would help.",
+        "The sources cited here have a narrow scope: one survey, two states, during the pandemic."
+      ],
+      "sources": [
+        {
+          "authors": "Rho, H. J., Riordan, C., Ibsen, C. L., Lamare, J. R., & Tapia, M.",
+          "year": 2022,
+          "title": "Do workers speak up when feeling job insecure? Examining workers' response to precarity during the COVID-19 pandemic",
+          "venue": "Work and Occupations",
+          "doi": "10.1177/07308884221128481",
+          "url": "https://doi.org/10.1177/07308884221128481",
+          "supports": "pattern — measured that insecure nonstandard workers use voice less than secure counterparts"
+        }
+      ],
+      "confidence": "emerging",
+      "basis": "direct",
+      "messenger_claim_basis": "NOT claimed. This entry deliberately makes no cost-asymmetry claim: the source measures who speaks, not who is punished for it. The retaliation-exposure gradient searched for in 352 abstracts was not found. Audit-only, never rendered.",
+      "risk_level": null,
+      "need_level": null,
+      "accessibility": null
+    }
+  ]
+}

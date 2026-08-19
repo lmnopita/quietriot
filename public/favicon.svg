@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="quietriot">
+  <!--
+    A lowercase "q" on a rounded tile, drawn as geometry rather than text so it
+    renders identically everywhere — favicons cannot rely on a font being
+    present.
+
+    Colours are DESIGN.md tokens, not new ones: sage --accent (#40614F) with the
+    glyph knocked out in --bg. The dark-mode block swaps to the lifted sage
+    (#8FB39F) the design system already defines for dark, with a dark glyph, so
+    the mark keeps its contrast against dark browser chrome instead of going
+    muddy. The tile carries its own background on purpose: a bare glyph would
+    disappear into whichever chrome the reader happens to be using.
+  -->
+  <style>
+    .tile { fill: #40614F; }
+    .mark { fill: none; stroke: #ffffff; }
+    .stem { fill: #ffffff; stroke: none; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #8FB39F; }
+      .mark { stroke: #26282b; }
+      .stem { fill: #26282b; }
+    }
+  </style>
+  <rect class="tile" width="32" height="32" rx="7" />
+  <circle class="mark" cx="13.6" cy="14.4" r="5.4" stroke-width="3" />
+  <rect class="stem" x="17.5" y="14.4" width="3" height="10.1" rx="1.5" />
+</svg>

@@ -1,0 +1,125 @@
+/*
+  quietriot — theme tokens. Locked in DESIGN.md via rendered probes.
+  Register: product. Pure-white surface, sage reserved for the action, warmth
+  carried by accent + typography (never a tinted background). No display serif,
+  no fluid clamp() heroes, no --paper-family names — those are banned (DESIGN.md).
+*/
+
+:root {
+  /* Light (primary) — ratios verified on --bg in DESIGN.md. */
+  --bg: #ffffff;
+  --ink: #1c1b1a; /* 17.20:1 */
+  --ink-2: #5c5955; /* 6.96:1 */
+  --src: #6b6864; /* 5.54:1 */
+  --line: #e4e1dd; /* decorative hairlines + card edges only */
+  --line-ui: #948f88; /* 3.21:1 — boundary of interactive controls (WCAG 1.4.11) */
+  --accent: #40614f; /* 6.91:1 — labels + action affordance */
+  --accent-soft: #5f8071; /* button border only (non-text ≥3:1) */
+  --accent-wash: rgba(64, 97, 79, 0.06); /* button hover */
+  --wash: linear-gradient(155deg, #edf3ef 0%, #e9f0f1 58%, #eceff4 100%);
+  --focus: #40614f;
+
+  /* Mono carries the archival signal: kickers, catalog card, years, counts. */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', ui-monospace, Menlo, Consolas, 'Liberation Mono',
+    monospace;
+
+  /* Fixed rem scale (~1.2). No fluid heroes. */
+  --fs-brand: 0.6875rem; /* 11px mono */
+  --fs-label: 0.6875rem; /* 11px mono */
+  --fs-cons: 0.78rem; /* ~12.5px — considerations, de-emphasized */
+  --fs-src: 0.75rem; /* 12px */
+  --fs-body-2: 0.875rem; /* 14px */
+  --fs-body: 0.9375rem; /* 15px */
+  --fs-heading: 0.8125rem; /* 13px — "Why this works for you" */
+  --fs-action: 1.5rem; /* 24px — action headline */
+  --fs-hero: 1.75rem; /* 28px — landing headline (fixed, sans) */
+
+  --measure: 30rem; /* ~460px content column */
+
+  color-scheme: light;
+}
+
+/* Dark applies from the system setting UNLESS the reader has chosen light,
+ * and from an explicit choice regardless of the system. The toggle writes
+ * data-theme on <html>; without it the app followed the OS only, which meant
+ * most readers would never see the other theme at all. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    /* Lifted neutral, not near-black (chalkboard was cut — DESIGN.md). */
+    --bg: #26282b;
+    --ink: #ecefee;
+    --ink-2: #aeb3b1;
+    --src: #979c9a;
+    --line: #3a3d41;
+    --line-ui: #6e747b; /* 3.13:1 on dark --bg */
+    --accent: #8fb39f;
+    --accent-soft: #8fb39f;
+    --accent-wash: rgba(143, 179, 159, 0.1);
+    --wash: linear-gradient(155deg, #2c3230 0%, #2b3133 58%, #2c2f34 100%);
+    --focus: #8fb39f;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+    /* Lifted neutral, not near-black (chalkboard was cut — DESIGN.md). */
+    --bg: #26282b;
+    --ink: #ecefee;
+    --ink-2: #aeb3b1;
+    --src: #979c9a;
+    --line: #3a3d41;
+    --line-ui: #6e747b; /* 3.13:1 on dark --bg */
+    --accent: #8fb39f;
+    --accent-soft: #8fb39f;
+    --accent-wash: rgba(143, 179, 159, 0.1);
+    --wash: linear-gradient(155deg, #2c3230 0%, #2b3133 58%, #2c2f34 100%);
+    --focus: #8fb39f;
+    color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* The step container (App.tsx) is focused in code on every screen change so
+   keyboard and screen-reader users land on the new screen. It is not something
+   a person clicked or tabbed to, so it draws no ring — a box around the whole
+   screen reads as an error, not as a position. Real controls are unaffected:
+   they keep the :focus-visible ring above.
+
+   Carried over from the other session's pre-launch accessibility work (PR #25). */
+[tabindex='-1']:focus,
+[tabindex='-1']:focus-visible {
+  outline: none;
+}

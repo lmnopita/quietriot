@@ -1,0 +1,45 @@
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+Copyright (c) 2026 quietriot
+
+WHAT THIS COVERS
+
+The evidence corpus and the documents that govern it:
+
+  src/data/evidence.json          the vetted entries and their citations
+  src/data/taxonomy.ts            causes, self-check options, reader copy
+  docs/EVIDENCE-VERIFICATION-LOG.md   how every citation was checked
+  docs/PRINCIPLES.md              the voice and no-fabrication contract
+  PRODUCT.md, DESIGN.md           the product and design specs
+
+The code is MIT licensed instead. See LICENSE.
+
+WHY THESE TERMS
+
+This is research writing, not software, and the work in it is the checking:
+resolving every DOI, confirming registration, reading each abstract before a
+claim was written, and recording the sources that were rejected and why.
+
+  Attribution, because a corpus that has been verified this way should be
+  traceable to how it was verified. If an entry is reused, a reader should be
+  able to follow it back to the log that shows its working.
+
+  ShareAlike, because a derived corpus that closes its sources would strip out
+  the only thing that makes this one trustworthy.
+
+Nothing here restricts quoting the underlying studies. Those belong to their
+publishers, are cited in full, and are linked so anyone can read them directly.
+
+FULL TEXT
+
+  https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+SUMMARY
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the license,
+indicate if changes were made, and distribute your contributions under the
+same license.
+
+The material is provided "as is", without warranties of any kind. It is not
+professional advice.

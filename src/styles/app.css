@@ -1,0 +1,769 @@
+/* quietriot — layout + components on the locked token system (theme.css). */
+
+.shell {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: clamp(1.5rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 2rem);
+  max-width: calc(var(--measure) + 4rem);
+  margin-inline: auto;
+}
+
+.stack {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: var(--measure);
+  width: 100%;
+  padding-block: clamp(1rem, 4vh, 2.5rem);
+}
+
+/* Landing vertically centers, everything else starts at top. */
+.hero {
+  align-self: center;
+  max-width: var(--measure);
+}
+
+.kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-brand);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--src);
+}
+
+.headline {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-hero);
+  line-height: 1.2;
+  letter-spacing: -0.014em;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+.lede {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.invitation {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.note {
+  margin: 0.5rem 0 0;
+  font-size: var(--fs-body-2);
+  color: var(--src);
+}
+
+.foot {
+  align-self: start;
+  max-width: var(--measure);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-body-2);
+  color: var(--src);
+  font-style: italic;
+}
+
+/* `.landing-notice` lived here until 2026-08-09. The legal note it styled
+   moved into the site footer so it carries on every screen, not just the
+   landing; see SiteFooter.tsx. */
+
+
+/* ---------------------------------------------------------------- Buttons */
+
+/* Start is the entry action — sage, the color reserved for moving. */
+.btn {
+  align-self: flex-start;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  padding: 0.7em 1.5em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  align-self: flex-start;
+  display: inline-block;
+  border: 1px solid var(--line-ui);
+  background: transparent;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: var(--fs-body-2);
+  padding: 0.55em 1.2em;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--accent-soft);
+}
+
+.btn-link {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: var(--src);
+  font: inherit;
+  font-size: var(--fs-body-2);
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.btn-link:hover {
+  color: var(--ink);
+}
+
+/* ------------------------------------------------------------ PositionPicker */
+
+.axis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.axis-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.axis-question {
+  padding: 0;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.axis-optional-tag {
+  font-weight: 400;
+  color: var(--src);
+}
+
+.axis-note {
+  margin: -0.2rem 0 0.2rem;
+  font-size: var(--fs-body-2);
+  color: var(--src);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.checkbox-row:hover {
+  background: var(--accent-wash);
+}
+.checkbox-row input[type='checkbox'] {
+  margin-top: 0.15rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+.checkbox-label {
+  display: block;
+  font-size: var(--fs-body);
+  color: var(--ink);
+}
+.checkbox-hint {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: var(--fs-body-2);
+  color: var(--src);
+}
+
+.skip-hint {
+  margin: 0;
+  font-size: var(--fs-body-2);
+  color: var(--src);
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------- CausePicker */
+
+.cause-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 0.75rem;
+}
+
+/* `.cause-cell` and its two child rules lived here until 2026-08-09. Each grid
+   child used to be a cell wrapping the card plus an optional outbound receipt
+   link, which had to sit outside the button because a button's accessible name
+   absorbs its contents. The cards are label-only now and carry no link, so the
+   grid's children are plain cards again. */
+
+.cause-card {
+  text-align: left;
+  border: 1px solid var(--line-ui);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  padding: 1.1rem 1.2rem;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.cause-card:hover {
+  border-color: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.cause-label {
+  font-size: var(--fs-body);
+  font-weight: 600;
+}
+/* `.cause-blurb` was removed 2026-08-09 with the one-line descriptions on the
+   cause cards. The cards carry a label and nothing else. */
+
+/* ---------------------------------------------------------------- Results */
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* The action zone — shaded wash, the first thing the eye lands on. */
+.action-zone {
+  background: var(--wash);
+  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+  padding: 1.4rem 1.35rem 1.35rem;
+}
+
+.action-kicker {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.action-headline {
+  margin: 0;
+  font-size: var(--fs-action);
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+.action-more {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: var(--fs-body-2);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+/* The extra actions stay hidden until the reveal; a bare [hidden] would be
+   overridden by display:flex above, so make it explicit. */
+.action-more[hidden] {
+  display: none;
+}
+.action-more li {
+  padding-left: 0.9rem;
+  position: relative;
+}
+.action-more li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+}
+.action-more.is-revealed li {
+  animation: reveal-rise 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.action-more.is-revealed li:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.action-more.is-revealed li:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.action-reveal {
+  margin-top: 1.1rem;
+  border: 1px solid var(--accent-soft);
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: var(--fs-body-2);
+  font-weight: 500;
+  padding: 0.55em 1.1em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.action-reveal:hover {
+  background: var(--accent-wash);
+}
+
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .action-more.is-revealed li {
+    animation: reveal-fade 0.2s ease both;
+  }
+}
+
+/* Why this works for you — the emphasized read, changes most per answer. */
+.why {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.why-heading {
+  margin: 0;
+  font-size: var(--fs-heading);
+  font-weight: 600;
+  color: var(--ink);
+}
+.why-body {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* Considerations — left-aligned, quieter than the why (DESIGN.md). */
+.considerations {
+  text-align: left;
+}
+.considerations-label {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--src);
+}
+.considerations-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.considerations-list li {
+  position: relative;
+  padding-left: 0.85rem;
+  font-size: var(--fs-cons);
+  line-height: 1.5;
+  color: var(--src);
+}
+.considerations-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--line);
+}
+
+/* The catalog card — real data only, our archival object (DESIGN.md). */
+.catalog {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.25rem 1rem;
+  background: var(--bg);
+}
+.catalog-hole {
+  position: absolute;
+  top: 1rem;
+  right: 1.15rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1.5px var(--line);
+}
+.catalog-head {
+  display: flex;
+  gap: 0.65rem;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.15rem;
+}
+.catalog-held {
+  color: var(--src);
+}
+/* Pending state — no sources listed until the verified DB is built. */
+.catalog-head--pending {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+.catalog-pending {
+  margin: 0;
+  font-size: var(--fs-src);
+  line-height: 1.5;
+  color: var(--src);
+  font-style: italic;
+}
+.cat-entry {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+.cat-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0.15rem;
+}
+
+/* The catalog header line: mono, darker, the thing the eye lands on. */
+.cat-venue {
+  margin: 0 0 0.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem; /* ~11.5px — leads the card without wrapping it */
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  color: var(--ink-2);
+}
+
+/* The specific article sits under it, quieter — detail, not headline. */
+.cat-title {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+.cat-title a {
+  color: var(--src);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.cat-title a:hover {
+  color: var(--accent);
+  border-color: var(--accent-soft);
+}
+.cat-out {
+  color: var(--src);
+  white-space: nowrap;
+}
+
+/* Visible to screen readers, not to the eye — the link text alone doesn't say
+   it opens elsewhere. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* The 8-bit envelope beside the contact address (Privacy.tsx). Sits on the
+   text baseline rather than hanging below it, and keeps a word-space of gap so
+   it reads as punctuation to the address, not as part of it. */
+.mail-glyph {
+  vertical-align: -0.05em;
+  margin-right: 0.45em;
+}
+
+/* ------------------------------------------------------------- Disclaimers */
+
+/* `.disclaimer-stack` and `.disclaimer` were removed 2026-08-09 along with the
+   `Disclaimer` component and the `ResultDisclaimers` block they styled. Both
+   lines that block carried are now said elsewhere — the footer's notice, and
+   each card's own considerations — so there is no page-level disclaimer left to
+   style. `.site-foot-notice` is where that register lives now. */
+
+/* `.values-note` and its three children lived here for one afternoon, styling
+   the value statement on the result screen. It moved to About 2026-08-09, where
+   it uses the page's own `.about-h` / `.about-p`. Only the quiet variant below
+   was needed. */
+
+/* The value tag on About: present, never shouted. It is the only thing marking
+   an ought-claim as a value rather than a finding, so it must not be hidden —
+   just quieter than the line it qualifies. */
+.about-p-quiet {
+  color: var(--src);
+  font-style: italic;
+}
+
+/* The contribute invitation, folded into the catalog card's own closing row
+   (issue #55) rather than a paragraph detached below it — a corrected source
+   is a correction to the sources block above it, so it lives there. Styled
+   like the last `.cat-entry` it follows: same dashed rule, same quiet size,
+   just italic to read as an aside rather than another citation. */
+.cat-contribute {
+  margin: 0;
+  padding: 0.5rem 0 0.15rem;
+  border-top: 1px dashed var(--line);
+  font-size: var(--fs-src);
+  color: var(--src);
+  line-height: 1.5;
+  font-style: italic;
+}
+.cat-contribute a {
+  font-style: normal;
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------ ThemeToggle */
+
+/* Quiet and out of the way: a comfort control, not a feature to show off. */
+.theme-toggle {
+  position: fixed;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 10;
+  border: 1px solid var(--line-ui);
+  background: var(--bg);
+  color: var(--src);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.4em 0.7em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: var(--accent-soft);
+}
+
+/* ----------------------------------------------------------- More results */
+
+.more-ways {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: var(--fs-body-2);
+  font-weight: 500;
+  padding: 0.2em 0;
+  cursor: pointer;
+}
+.more-ways:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.result-more {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.result-more[hidden] {
+  display: none;
+}
+.result-more.is-open {
+  animation: reveal-fade 0.2s ease both;
+}
+
+/* ------------------------------------------------------------------ About */
+
+.foot-link {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: var(--fs-body-2);
+  color: var(--src);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.foot-link:hover {
+  color: var(--ink);
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.about-h {
+  margin: 0;
+  font-size: var(--fs-heading);
+  font-weight: 600;
+  color: var(--ink);
+}
+.about-p {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+.about-p a {
+  color: var(--accent);
+}
+
+/* Breathing room between the pitch and its proof. The stack gap is 1.5rem;
+   this adds to it rather than replacing it. */
+.lede-proof {
+  margin: 0.35rem 0 0;
+}
+
+/* The research claim is itself the link. */
+.lede-link {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.lede-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* `.blurb-source` styled the superscript receipt link on the immigrants cause
+   card — the one that opened ICE detention statistics. Removed 2026-08-09 with
+   the link itself.
+
+   Worth keeping in mind if a card ever carries a control again: this rule
+   existed to force a 24x24 target, because the bare glyph measured 17x18 and
+   failed the WCAG 2.2 target-size minimum. */
+
+/* A `.stack:has(.landing-notice) + .site-foot` rule sat here, suppressing the
+   footer's top border on the landing so the legal note and the footer read as
+   one block. Removed 2026-08-09 with the note itself: the footer now carries
+   the line, so there is only ever one rule to draw. */
+
+/* ------------------------------------------------------------- Site footer */
+
+/* Persistent on every step. Quiet enough to ignore, present enough that the
+   reassurance is never more than a glance away. */
+.site-foot {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  max-width: var(--measure);
+  width: 100%;
+}
+/* The links stay a row; the notice sits under them. Was a single row until
+   2026-08-09, when the "not advice" line moved here from the result screen so
+   it carries on every page. */
+.site-foot-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+/* Quieter than the links: it is a standing condition, not somewhere to go. */
+.site-foot-notice {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  color: var(--src);
+}
+.site-foot-link {
+  border: none;
+  background: none;
+  padding: 0.2em 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  color: var(--src);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.site-foot-link:hover {
+  color: var(--accent);
+}
+.site-foot-sep {
+  color: var(--line-ui);
+  font-size: 0.6875rem;
+}

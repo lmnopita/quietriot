@@ -1,0 +1,26 @@
+# Keep the deploy to the web app.
+#
+# Vercel uploads the whole repository before building. The harvester is a
+# local Python pipeline that never runs on Vercel — it writes a SQLite file on
+# the operator's own machine — so shipping 77 files and 1.1 MB of it to the
+# build machine on every deploy buys nothing.
+#
+# It is also the safer default: nothing under harvester/ has any business
+# being served, and excluding it here means a stray file in that tree can
+# never end up in a public build.
+harvester/
+
+# Python detritus, wherever it lands.
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/.pytest_cache/
+**/.ruff_cache/
+
+# The corpus itself, if it is ever created outside the gitignored path.
+harvester-data/
+
+# Docs and planning material are for the repo, not the bundle.
+docs/
+*.md
+!README.md
