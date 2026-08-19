@@ -73,9 +73,7 @@ export default function App() {
   /**
    * Move focus to the new screen whenever the step changes.
    *
-   * Carried over from the other session's pre-launch accessibility work
-   * (PR #25) rather than lost when that branch went stale. Without it, focus
-   * stays on `<body>` through the whole flow: the button a reader just pressed
+   * Without it, focus stays on `<body>` through the whole flow: the button a reader just pressed
    * unmounts, focus falls back to the document, and the next Tab starts again
    * from the top of the page. A screen reader announces nothing at all, so
    * there is no signal that the screen changed.
@@ -135,7 +133,7 @@ export default function App() {
                 arrival at the one screen the whole product exists to deliver.
                 Screen-reader-only by decision: a visible heading here would put
                 a second large element above the action zone, and the action is
-                meant to land first (DESIGN.md, PRODUCT.md #1).
+                meant to land first.
 
                 Both lines read from `causeLabel`, so they cannot drift apart.
                 The visible kicker is aria-hidden because this heading already
@@ -159,12 +157,8 @@ export default function App() {
                 is meant to act from. See About.tsx for why the label still
                 works from there. */}
 
-            {/* PRINCIPLES.md requires an invitation to contribute — it grows the
-                evidence base bottom-up, and a corrected source is the most
-                valuable thing anyone sends. Rendered inside ResultList's lead
-                card now, folded into the sources block it's actually about,
-                rather than as a paragraph detached below it (issue #55). See
-                Citation.tsx. */}
+            {/* The invitation to contribute is rendered inside the lead card's
+                sources block, where corrections are most useful. */}
           </div>
         )}
       </div>

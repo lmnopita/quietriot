@@ -2,7 +2,7 @@
 
 A calm, single-page tool for finding one evidence-grounded way to act in solidarity with people who face more risk.
 
-It does not collect information, use accounts, cookies, analytics, or a server. The app is entirely static: it runs in the browser and makes no network requests.
+It does not collect information, use accounts, cookies, analytics, or a server. The app is entirely static: it runs in the browser and makes no network requests. If a reader chooses a light or dark theme, that preference is saved only in their browser's local storage and is never sent anywhere.
 
 ## What it does
 

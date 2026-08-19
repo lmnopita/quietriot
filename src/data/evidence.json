@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "note": "CHECKPOINT #3 — the no-fabrication gate. Every source below was verified real, resolvable, and on-point at build time (Crossref/OpenAlex + agency-registration checks, or a resolving URL for the law review) and grounded in the paper's actual abstract. Unverifiable sources are dropped. Reader-facing prose follows PRINCIPLES.md 'How answers read to users' (plain words, fixed 5-part order, honest-limit line, extrapolation template).",
+    "note": "Every source below was verified as real, resolvable, and on-point at build time (Crossref/OpenAlex plus agency-registration checks, or a resolving URL for the law review) and grounded in the paper's actual abstract. Unverifiable sources are dropped. Reader-facing prose uses plain language, an action-first order, an honest-limit line, and a fixed extrapolation notice.",
     "reader_facing_fields": [
       "pattern",
       "why_lower_risk",
@@ -20,7 +20,7 @@
     ],
     "honest_limit_last_note": "`honest_limit_last` is a rendering directive, not an audit-only field and not reader-facing copy. When true, the shared honest-limit line renders LAST among an entry's considerations instead of first. It changes position only, never presence: the line cannot be omitted or reworded per entry. Set on `breed-stigma-is-racial` so the card opens by acknowledging the reader's own experience of a frightening dog rather than with a hedge.",
     "confidence_scale": "well-established | mixed | emerging (strength of the evidence base)",
-    "basis_scale": "direct (measured for this case) | extrapolated (applied from similar research; reader prose uses the PRINCIPLES.md template)",
+    "basis_scale": "direct (measured for this case) | extrapolated (applied from similar research; reader prose makes the extrapolation clear)",
     "schema_version": 2,
     "coverage_note": "Covers 7 causes with >=1 verified entry: racial-justice, gender-equity, stigmatized-breed-dogs (2 entries), lgbtq, immigrants, disability (2 entries), workers. The remaining cause (unhoused) has no vetted entry yet and is HIDDEN in the UI per taxonomy decision C — never shown empty. `trans` was removed from the taxonomy 2026-08-08 as redundant with lgbtq; its research gap stays recorded in the verification log. The immigrants entry also re-surfaces the `citizen` self-check axis per decision E."
   },

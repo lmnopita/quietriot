@@ -9,8 +9,8 @@ import type { EvidenceSource } from '../lib/match'
  * condition is now met by hand: every source in the corpus has had its DOI
  * resolved against Crossref, confirmed as genuinely registered, and its real
  * abstract read before the claim was written — the trail is in
- * docs/EVIDENCE-VERIFICATION-LOG.md. The harvester will add scale later; it was
- * never what made these particular citations trustworthy.
+ * docs/EVIDENCE-VERIFICATION-LOG.md. The citations are reviewed before they
+ * are included.
  *
  * It also fixed a live contradiction: the landing page promises work "grounded
  * in real research" while the card underneath showed nothing, which is the one
@@ -21,7 +21,7 @@ import type { EvidenceSource } from '../lib/match'
 const SOURCES_DB_READY = true
 
 /**
- * The catalog card — our archival object (DESIGN.md "The catalog card").
+ * The catalog card presents the source record for each entry.
  * When live, it renders whatever real sources the matched entry carries: no
  * invented call numbers, ever; "N held" is the true `sources.length`, so the
  * card can never claim more provenance than the evidence base actually holds.
@@ -102,10 +102,8 @@ export default function Citation({
         </article>
       ))}
 
-      {/* Folded into the catalog card, not a loose paragraph after it
-          (issue #55): the invitation is about sources — a correction to the
-          evidence base — so it belongs with the sources, not detached below
-          them. */}
+      {/* The invitation concerns source corrections, so it belongs with the
+          sources rather than below the card. */}
       {contribute && (
         <p className="cat-contribute">
           {COPY.contribute.lead}{' '}

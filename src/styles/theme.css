@@ -1,12 +1,12 @@
 /*
-  quietriot — theme tokens. Locked in DESIGN.md via rendered probes.
+  quietriot — theme tokens.
   Register: product. Pure-white surface, sage reserved for the action, warmth
   carried by accent + typography (never a tinted background). No display serif,
-  no fluid clamp() heroes, no --paper-family names — those are banned (DESIGN.md).
+  no fluid clamp() heroes, no --paper-family names.
 */
 
 :root {
-  /* Light (primary) — ratios verified on --bg in DESIGN.md. */
+  /* Light (primary) — ratios verified on --bg. */
   --bg: #ffffff;
   --ink: #1c1b1a; /* 17.20:1 */
   --ink-2: #5c5955; /* 6.96:1 */
@@ -47,7 +47,7 @@
  * most readers would never see the other theme at all. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    /* Lifted neutral, not near-black (chalkboard was cut — DESIGN.md). */
+    /* Lifted neutral, not near-black. */
     --bg: #26282b;
     --ink: #ecefee;
     --ink-2: #aeb3b1;
@@ -64,7 +64,7 @@
 }
 
 :root[data-theme='dark'] {
-    /* Lifted neutral, not near-black (chalkboard was cut — DESIGN.md). */
+    /* Lifted neutral, not near-black. */
     --bg: #26282b;
     --ink: #ecefee;
     --ink-2: #aeb3b1;
@@ -116,9 +116,7 @@ a {
    keyboard and screen-reader users land on the new screen. It is not something
    a person clicked or tabbed to, so it draws no ring — a box around the whole
    screen reads as an error, not as a position. Real controls are unaffected:
-   they keep the :focus-visible ring above.
-
-   Carried over from the other session's pre-launch accessibility work (PR #25). */
+   they keep the :focus-visible ring above. */
 [tabindex='-1']:focus,
 [tabindex='-1']:focus-visible {
   outline: none;

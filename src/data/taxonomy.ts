@@ -20,7 +20,7 @@
  * change too — so this file is the thing to get right BEFORE any evidence is
  * written. That's why it's its own checkpoint.
  *
- * Everything here answers to docs/PRINCIPLES.md. In particular:
+ * The reader-facing copy follows these commitments:
  *   #2 lower *relative* risk, never "safe"  → labels never imply safety.
  *   #3 solidarity, not saviorism            → "stand with", "spend", "insulation
  *                                              you have"; never "save/help/give
@@ -370,14 +370,14 @@ export const CAUSES: Cause[] = [
  * User-facing copy — everything not tied to a specific evidence entry.
  *
  * Calm, spare, warm, grown-up. No hype, no jargon, no guilt, no exclamation
- * points (Tone, PRINCIPLES.md). None of this is final wording.
+ * points. None of this is final wording.
  * ==================================================================== */
 
 export const COPY = {
   brand: 'quietriot',
 
   landing: {
-    // Default headline. Alternates (from PRINCIPLES microcopy seeds):
+    // Default headline. Alternate wording considered during editing:
     //   "You might be exactly the right person to say something."
     //   "Some risks cost you less than they’d cost them. Here’s where."
     headline: 'Spend the safety you have alongside people who may have less.',
@@ -422,9 +422,9 @@ export const COPY = {
   },
 
   result: {
-    // Action-first order (PRINCIPLES "Every answer follows this fixed order").
+    // Action-first order.
     // The kicker wording is load-bearing — it keeps the action an offer, not an
-    // order — and must stay verbatim with PRINCIPLES.md.
+    // order.
     actionLabel: 'One thing you could try, if it fits',
     // "from you" until 2026-08-09. It was the last piece of the app addressing
     // a reader it no longer knows anything about: the self-check is gone, the
@@ -434,7 +434,7 @@ export const COPY = {
     // Reveal button for the extra actions; {n} is the count still hidden.
     revealActions: (n: number) => `Show me ${n} more`,
     /**
-     * The honest limit, rendered once per card (PRINCIPLES #2).
+     * The honest limit, rendered once per card.
      *
      * Lived as a per-entry caveat until 2026-08-09, where eight of nine entries
      * carried it and seven appended their own explanation — "Homophobic
@@ -452,7 +452,7 @@ export const COPY = {
      * warning, that is a caveat about that evidence, not a rewording of this.
      */
     honestLimit: 'Lower risk isn’t no risk; there’s still some friction in speaking up.',
-    // Conditional caveat label — must match the count (DESIGN.md "Considerations").
+    // Conditional caveat label — must match the count.
     caveatLabelOne: 'One consideration',
     caveatLabelMany: 'A few considerations',
     // Catalog card header. The count is the real sources.length.
@@ -516,9 +516,8 @@ export const COPY = {
   },
 
   /**
-   * PRINCIPLES.md requires an invitation to contribute — it grows the evidence
-   * base bottom-up, and a corrected source is the most valuable thing anyone
-   * sends. It was reachable only through the empty state until 2026-08-09.
+   * An invitation to contribute helps keep the evidence base open to
+   * corrections and additions.
    */
   contribute: {
     lead: 'Know real research or a real example we’re missing?',

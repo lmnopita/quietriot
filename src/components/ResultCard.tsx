@@ -4,11 +4,11 @@ import type { EvidenceEntry } from '../lib/match'
 import Citation from './Citation'
 
 /**
- * Action-first answer (PRINCIPLES.md "Every answer follows this fixed order"):
+ * Action-first answer:
  * the action → why it works for you → the honest limit → the source.
  *
  * The action zone leads with the first low-cost action; "Show me N more" reveals
- * the rest (the product's one piece of motion, DESIGN.md "Motion"). The
+ * the rest. The
  * remaining actions render in the DOM up front and are only visually enhanced by
  * the reveal, so nothing ships blank to a reduced-motion or headless reader.
  *
@@ -28,7 +28,7 @@ export default function ResultCard({
 
   const [firstAction, ...moreActions] = entry.low_risk_actions
   // +1 for the shared honest-limit line rendered below, so the label still
-  // matches what a reader can count (DESIGN.md "Considerations").
+  // matches what a reader can count.
   const caveatLabel =
     entry.caveats.length + 1 === 1
       ? COPY.result.caveatLabelOne
@@ -65,8 +65,7 @@ export default function ResultCard({
 
       <section className="why">
         {/* h2, not h3: App.tsx renders the screen's h1, so an h3 here would
-            skip a level. Carried over from the other session's pre-launch
-            accessibility work (PR #25). */}
+            skip a level. */}
         <h2 className="why-heading">{COPY.result.whyHeading}</h2>
         <p className="why-body">{entry.pattern}</p>
         <p className="why-body">{entry.why_lower_risk}</p>
@@ -79,8 +78,7 @@ export default function ResultCard({
               per-entry caveat until 2026-08-09, where seven of the nine
               appended their own explanation and editorialised past the sources.
               Rendered structurally it cannot be omitted, softened for one
-              cause, or drift — which is a stronger reading of PRINCIPLES #2
-              than nine hand-maintained copies.
+              cause, or drift more easily than nine hand-maintained copies.
 
               `honest_limit_last` changes its POSITION only, never its presence
               or its wording: the line renders either way, identical in both.

@@ -24,7 +24,7 @@ Verification method key:
 users — `confidence` (well-established | mixed | emerging = strength of the
 evidence base) and `basis` (direct = measured for this case | extrapolated =
 applied from similar research, and rendered to users with the fixed
-PRINCIPLES.md template).
+standard extrapolation wording).
 
 Last audit: 2026-07-16 — **PASS**: 5 entries, all tags valid against taxonomy,
 no banned jargon in reader fields, 8/8 DOIs registered, law-review URL 200,
@@ -101,7 +101,7 @@ and the reassurance is rendered with the template. Kept, by decision.
   `breed-stigma-is-racial` (direct) + `breed-advocate-lower-cost` (extrapolated).
   Restored **Linder (2018)** via resolving URL. Added **Weber & Dickter (2015)**
   to the LGBTQ entry from the targeted search. Both inferences relabeled from
-  `emerging` → `basis: extrapolated`, rendered with the PRINCIPLES.md template.
+  `emerging` → `basis: extrapolated`, rendered with standard extrapolation wording.
   All reader-facing prose rewritten to the "How answers read to users" voice
   (plain words, no jargon — audit confirms none of the banned terms appear).
 
@@ -257,7 +257,7 @@ and OpenAlex for ally/bystander confrontation of ableism (`confronting ableism`,
 `disability microaggressions bystander intervention`, `nondisabled advocate
 disability bias`, `ally confrontation disability discrimination`) and found no
 on-point empirical source. So `basis: extrapolated`, and the reader gets the
-exact PRINCIPLES.md template rather than a custom hedge. The transfer is from
+standard extrapolation wording rather than a custom hedge. The transfer is from
 the confrontation literature already verified in this corpus (Rasinski & Czopp
 2010; Gulker et al. 2013), where non-target confronters are received better.
 
@@ -396,7 +396,7 @@ through.
 
 ## Searched: `workers` — one usable source, and it is not the one we went looking for (2026-08-05)
 
-First search run through the harvester rather than by hand. Two queries, 593
+First structured search run rather than a manual search. Two queries, 593
 works, 352 with abstracts. Every judgement below is from the abstract.
 
 **Scope, restated because it is what most candidates failed.** `workers` means
@@ -466,7 +466,7 @@ a guess from the title.
 
 ### How much of this literature is actually reachable (2026-08-05, recounted 2026-08-08)
 
-Measured on the labor corpus, not estimated. Of **51 works** the harvester tried
+Measured on the labor corpus, not estimated. Of **51 works** reviewed in the
 to fetch full text for:
 
 - **15 acquired** — 15 documents (12 PDF, 2 JATS, 1 HTML), one per work
@@ -499,7 +499,7 @@ telling you precisely what it could not reach — not handing over a stack of
 readable full text.
 
 The paywalled/not-found split is recorded per work in `fetch_log`, so this is
-answerable at any time rather than a guess: `harvester status` breaks it down
+answerable at any time rather than a guess: the review record breaks it down
 by rung.
 
 ### Where this leaves the cause
@@ -511,7 +511,7 @@ study would be exactly the substitution this log exists to catch.
 ## Entry built: `secure-worker-voice` (2026-08-05)
 **Tags:** `workplace-seniority` × `workers` · **confidence:** emerging · **basis:** direct
 
-Built on Rho et al. (2022) after the harvester's `workers` run, on the narrower
+Built on Rho et al. (2022) after the workers review, on the narrower
 claim the evidence actually supports rather than the one we went looking for.
 
 | Source | Verified via | Verdict |
